@@ -10,6 +10,36 @@ $(document).ready(function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.getElementsByClassName('ripple');
+
+    Array.from(buttons).forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            const rippleEffect = button.querySelector('.ripple-effect');
+            if (rippleEffect) {
+                button.removeChild(rippleEffect);
+            }
+
+            const rect = button.getBoundingClientRect();
+            const x = rect.width / 2; // Center of the button horizontally
+            const y = rect.height / 2; // Center of the button vertically
+            const diameter = Math.max(rect.width, rect.height);
+
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple-effect');
+            ripple.style.width = ripple.style.height = diameter + 'px';
+            ripple.style.left = x - diameter / 2 + 'px';
+            ripple.style.top = y - diameter / 2 + 'px';
+
+            button.appendChild(ripple);
+
+            setTimeout(function () {
+                button.removeChild(ripple);
+            }, 800); // Duration of the animation (same as ripple-animation)
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const texts = [
         'UI/UX Designer',

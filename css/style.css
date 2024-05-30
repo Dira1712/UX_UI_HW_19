@@ -310,6 +310,26 @@ a {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #346065; /* Blue color for ripple */
+    color: #fff;
+    animation: ripple-animation 0.8s linear;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
 .projectsContainer_im img {
     width: 100%;
     height: 100%;
