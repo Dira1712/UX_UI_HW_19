@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.getElementsByClassName('ripple');
 
     Array.from(buttons).forEach(function (button) {
-        button.addEventListener('click', function (event) {
+        button.addEventListener('mouseenter', function (event) {
             const rippleEffect = button.querySelector('.ripple-effect');
             if (rippleEffect) {
                 button.removeChild(rippleEffect);
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ensure the new text is visible
         setTimeout(() => {
             newH2.classList.add('show');
-        }, 1000); // Small delay to ensure transition
+        }, 300); // Small delay to ensure transition
 
         // Remove the old text
         const previousParagraph = heroTextElement.querySelector('h2.show');
