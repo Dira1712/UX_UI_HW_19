@@ -1,5 +1,3 @@
-
-
 .montserrat-secondary-font {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -7,30 +5,157 @@
     font-style: normal;
 }
 
-.Navbar {
+/*.Navbar {*/
+/*    background-color: #E8DFD3;*/
+/*    height: 130px;*/
+/*}*/
+
+/*.nav {*/
+/*    position: relative;*/
+/*    float: right;*/
+/*    right: 144px;*/
+/*    top: 60px;*/
+/*}*/
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #E8DFD3;
     height: 130px;
 }
 
-.nav {
+.logo_img {
+    height: 70px;
+    width: 70px;
     position: relative;
-    float: right;
-    right: 144px;
-    top: 60px;
+    left: 144px;
 }
 
-.HeroContainer {
-    position: relative;
-    background-color: #E8DFD3;
-    height: 800px;
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 100px;
+    display: flex;
 }
 
-.HeroSection {
-    position: relative;
-    background-color: #E8DFD3;
-    height: 800px;
-    width: 1424px;
+.nav-links li {
+    margin-left: 20px;
 }
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link:before {
+    content: "";
+    position: absolute;
+    width: 0; /* Initial width is 0 */
+    height: 1px;
+    bottom: -5px;
+    left: 1%;
+    border-bottom: 5px solid #B0532A;
+    transition: width 0.5s ease;
+}
+
+.nav-link:hover:before {
+    width: 40%; /* Change width on hover */
+}
+
+.heroContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px 20px 120px 20px;
+    height: 90vh;
+}
+
+.heroContainer_name {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-left: 100px;
+    justify-self: start;
+    align-self: center;
+    color: #FFF8F0;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.heroContainer_role {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+    align-self: start;
+    color: #C3DBFF;
+    text-align: right;
+    font-family: "TAN - AEGEAN";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.heroContainer_role h2 {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 0;
+}
+
+.heroContainer_role h2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.heroContainer_about {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: end;
+    align-self: start;
+    padding-top: 20px;
+    color: #FFCD29;
+    text-align: right;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.heroContainer_quote {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 2;
+    color: #346065;
+    text-align: right;
+    font-family: "TAN - AEGEAN";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+}
+
+
 
 .myDescriptionArea {
     position: absolute;
@@ -190,6 +315,25 @@ a {
     height: 100%;
     object-fit: cover; /* Ensures image covers the container */
     object-position: center;
+}
+
+.footerNavLink {
+    position: relative;
+}
+
+.footerNavLink:before {
+    content: "";
+    position: absolute;
+    width: 0; /* Initial width is 0 */
+    height: 1px;
+    bottom: -5px;
+    left: 0; /* Changed from 1% to 0 */
+    border-bottom: 5px solid #B0532A;
+    transition: width 0.5s ease;
+}
+
+.footerNavLink:hover:before {
+    width: 40%; /* Changed from 40% to 100% */
 }
 
 
